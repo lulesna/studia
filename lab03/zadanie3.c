@@ -1,19 +1,21 @@
+/*Napisz program który pobierze od użytkownika dwie liczby i zwróci większą z nich.*/
+
 #include <stdio.h>
 
 int main() 
 {
     int liczba1, liczba2;
 
-    printf("podaj pierwszą liczbę: ");
+    printf("Podaj pierwszą liczbę: ");
     scanf ("%d", &liczba1);
-    printf("podaj drugą liczbę: ");
+    printf("Podaj drugą liczbę: ");
     scanf ("%d", &liczba2);
 
     if (liczba1 > liczba2) {
-        printf("większa jest pierwsza liczba: %d", liczba1);
+        printf("Większa jest pierwsza liczba.\n");
     }
     else {
-        printf("większa jest druga liczba: %d", liczba2);
+        printf("Większa jest druga liczba.\n");
     }
 
     return 0;
