@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int main() {
-
+int main() 
+{
     char znak;
     int kod, odpowiedz;
 
-    printf("Jeśli chcesz podać znak ASCII, wpisz '1', jeśli chcesz podać kod ASCII, wpisz '2': ");
+    printf("Jeśli chcesz podać znak, wpisz '1', jeśli chcesz podać kod ASCII, wpisz '2': ");
     scanf ("%d", &odpowiedz);
 
     if (odpowiedz == 1) {
@@ -38,5 +38,5 @@ int main() {
         printf("niepoprawna odpowiedź");
     }
 
-return 0;
+    return 0;
 }

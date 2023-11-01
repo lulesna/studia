@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main() {
-
+int main() 
+{
     int liczba1, liczba2;
 
     printf("podaj pierwszą liczbę: ");
@@ -16,5 +16,5 @@ int main() {
         printf("większa jest druga liczba: %d", liczba2);
     }
 
-return 0;
+    return 0;
 }
