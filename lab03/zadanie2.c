@@ -1,12 +1,19 @@
+/*Napisz program który pobierze od użytkownika dwie liczby i zwróci wynik ich:
+dodawaia
+odejmowania
+mnożenia
+dzielenia
+resztę z dzielenia*/
+
 #include <stdio.h>
 
 int main() 
 {
     int liczba1, liczba2;
 
-    printf("podaj pierwszą liczbę: ");
+    printf("Podaj pierwszą liczbę: ");
     scanf ("%d", &liczba1);
-    printf("podaj drugą liczbę: ");
+    printf("Podaj drugą liczbę: ");
     scanf ("%d", &liczba2);
 
     int suma = liczba1 + liczba2;
@@ -15,11 +22,11 @@ int main()
     float iloraz = liczba1 / liczba2;
     int reszta_z_dzielenia = liczba1 % liczba2;
 
-    printf("suma: %d\n", suma);
-    printf("różnica: %d\n", roznica);
-    printf("iloczyn: %d\n", iloczyn);
-    printf("iloraz: %f\n", iloraz);
-    printf("reszta z dzielenia: %d\n", reszta_z_dzielenia);
+    printf("Suma: %d\n", suma);
+    printf("Różnica: %d\n", roznica);
+    printf("Iloczyn: %d\n", iloczyn);
+    printf("Iloraz: %f\n", iloraz);
+    printf("Reszta z dzielenia: %d\n", reszta_z_dzielenia);
 
     return 0;
 }
