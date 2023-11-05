@@ -1,18 +1,20 @@
+/*Napisz program który pobierze od użytkownika rok i sprawdzi czy jest on przestępny.*/
+
 #include <stdio.h>
 
-int main() {
-
+int main() 
+{
     int rok;
 
-    printf("podaj rok: ");
+    printf("Podaj rok: ");
     scanf ("%d", &rok);
 
-    if (rok % 4 == 0 ) {
-        printf("rok %d jest przestępny\n", rok);
+    if ((rok % 4 == 0 && rok % 100 != 0) || (rok % 400 == 0)) {
+        printf("Rok %d jest przestępny.\n", rok);
     }
     else {
-        printf("rok %d nie jest przestępny\n", rok);
+        printf("Rok %d nie jest przestępny.\n", rok);
     }
 
-return 0;
+    return 0;
 }

@@ -1,25 +1,27 @@
+/*Napisz program który pobierze od użytkownika trzy liczby i zwróci największą liczbę.*/
+
 #include <stdio.h>
 
-int main() {
-
+int main() 
+{
     int liczba1, liczba2, liczba3;
 
-    printf("podaj pierwszą liczbę: ");
+    printf("Podaj pierwszą liczbę: ");
     scanf ("%d", &liczba1);
-    printf("podaj drugą liczbę: ");
+    printf("Podaj drugą liczbę: ");
     scanf ("%d", &liczba2);
-    printf("podaj trzecią liczbę: ");
+    printf("Podaj trzecią liczbę: ");
     scanf ("%d", &liczba3);
 
     if (liczba1 > liczba2 && liczba1 > liczba3) {
-        printf("największa jest pierwsza liczba: %d\n", liczba1);
+        printf("Największa jest pierwsza liczba.\n");
     }
     else if (liczba2 > liczba3) {
-        printf("największa jest druga liczba: %d\n", liczba2);
+        printf("Największa jest druga liczba.\n");
     }
     else {
-        printf("największa jest trzecia liczba: %d\n", liczba3);
+        printf("Największa jest trzecia liczba.\n");
     }
 
-return 0;
+    return 0;
 }
