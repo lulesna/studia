@@ -8,11 +8,11 @@ int main()
     int kod, odpowiedz;
 
     printf("Jeśli chcesz podać znak, wpisz '1', jeśli chcesz podać kod ASCII, wpisz '2': ");
-    scanf ("%d", &odpowiedz);
+    scanf("%d", &odpowiedz);
 
     if (odpowiedz == 1) {
         printf("Podaj znak ASCII: ");
-        scanf (" %c", &znak);
+        scanf(" %c", &znak);
 
         if ((znak >= 'a' && znak <= 'z') || (znak >= 'A' && znak <= 'Z')) {
             printf("Podany znak jest literą alfabetu.\n");
@@ -24,7 +24,7 @@ int main()
 
     else if (odpowiedz == 2) {
         printf("Podaj kod ASCII: ");
-        scanf ("%d", &kod);
+        scanf("%d", &kod);
 
         if ((kod >= 65 && kod <= 90) || (kod >= 97 && kod <= 122)) {
             printf("Podany kod jest literą alfabetu.\n");

@@ -7,9 +7,9 @@ int main()
     int liczba1, liczba2;
 
     printf("Podaj pierwszą liczbę: ");
-    scanf ("%d", &liczba1);
+    scanf("%d", &liczba1);
     printf("Podaj drugą liczbę: ");
-    scanf ("%d", &liczba2);
+    scanf("%d", &liczba2);
 
     if (liczba1 > liczba2) {
         printf("Większa jest pierwsza liczba.\n");

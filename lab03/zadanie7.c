@@ -7,13 +7,13 @@ int main()
     int dzien, miesiac, rok;
 
     printf("Podaj dzień: ");
-    scanf ("%d", &dzien);
+    scanf("%d", &dzien);
     
     printf("Podaj miesiąc: ");
-    scanf ("%d", &miesiac);
+    scanf("%d", &miesiac);
     
     printf("Podaj rok: ");
-    scanf ("%d", &rok);
+    scanf("%d", &rok);
 
     if (miesiac >=1 && miesiac <= 12) {
         
