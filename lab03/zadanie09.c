@@ -8,10 +8,10 @@ int main()
     int x1, y1, x2, y2, a, b, p, l;
 
     printf("Podaj współrzędne pierwszego wierzchołka prostokąta:\n");
-    scanf ("%d %d", &x1, &y1);
+    scanf("%d %d", &x1, &y1);
 
     printf("Podaj współrzędne drugiego wierzchołka prostokąta:\n");
-    scanf ("%d %d", &x2, &y2);
+    scanf("%d %d", &x2, &y2);
 
     a = abs(x1 - x2);
     b = abs(y1 - y2);

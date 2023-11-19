@@ -2,18 +2,17 @@
 
 #include <stdio.h>
 
-int main() 
+int main()
 {
-    unsigned int n;
+    unsigned int n, suma_kwadratow = 0;
+    
     printf("Podaj liczbę naturalną: ");
-    scanf ("%u", &n);
+    scanf("%u", &n);
 
-    unsigned int suma_kwadratow = 0;
-    
-    for(unsigned long i = 1; i <= n; i++) {
-      suma_kwadratow += i * i;
+    for(int i = 1; i <= n; i++) {
+        suma_kwadratow += i * i;
     }
-    
+
     printf("Suma kwadratów od 1 do %u wynosi: %u\n", n, suma_kwadratow);
 
     return 0;

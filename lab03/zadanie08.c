@@ -8,10 +8,10 @@ int main()
     int dzien1, miesiac1, rok1, dzien2, miesiac2, rok2;
 
     printf("Podaj pierwszą datę (dzień, miesiąc i rok):\n");
-    scanf ("%d %d %d", &dzien1, &miesiac1, &rok1);
+    scanf("%d %d %d", &dzien1, &miesiac1, &rok1);
 
     printf("Podaj drugą datę (dzień, miesiąc i rok):\n");
-    scanf ("%d %d %d", &dzien2, &miesiac2, &rok2);
+    scanf("%d %d %d", &dzien2, &miesiac2, &rok2);
 
     if (miesiac1 < 1 || miesiac1 > 12 || miesiac2 < 1 || miesiac2 > 12) {
         printf("Podano niepoprawny miesiąc.\n");
@@ -67,7 +67,7 @@ int main()
     int roznicamiesiecy = abs(miesiac1 - miesiac2);
     int roznicalat = abs(rok1 - rok2); 
 
-    printf ("Różnica dni wynosi: %d\nRóżnica miesięcy wynosi: %d\nRóżnica lat wynosi: %d\n", roznicadni, roznicamiesiecy, roznicalat);
+    printf("Różnica dni wynosi: %d\nRóżnica miesięcy wynosi: %d\nRóżnica lat wynosi: %d\n", roznicadni, roznicamiesiecy, roznicalat);
 
     return 0;
 }

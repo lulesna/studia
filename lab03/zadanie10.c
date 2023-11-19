@@ -7,7 +7,7 @@ int main()
     int a, b, c;
 
     printf("Podaj wartości trzech odcinków:\n");
-    scanf ("%d %d %d", &a, &b, &c);
+    scanf("%d %d %d", &a, &b, &c);
 
     if ((a + b > c) && (a + c > b) && (b + c > a)) {
         printf("Trójkąt o bokach %d, %d, %d istnieje.\n", a, b, c);
