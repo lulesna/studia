@@ -17,7 +17,6 @@ int funkcja(unsigned int a1, unsigned int b1, unsigned int a2, unsigned int b2, 
             a3 = a2;
             printf("a3 = %d\n", a3);
         }
-        
     }
     else {
         printf("Błędne dane, b1 powinno być większe od a1, i b2 powinno być większe od a2.\n");
