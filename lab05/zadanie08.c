@@ -2,31 +2,31 @@
 
 #include <stdio.h>
 
-int czy_poprawna_data(int dzien, int miesiac, int rok)
+int czy_poprawna_data(int d, int m, int r)
 {
-    if (miesiac >=1 && miesiac <= 12) {
-        if (miesiac == 1 || miesiac == 3 || miesiac == 5 || miesiac == 7 || miesiac == 8 || miesiac == 10 || miesiac == 12) {
-            if (dzien >= 1 && dzien <= 31) {
-                printf("Data %d.%d.%d jest poprawna.\n", dzien, miesiac, rok);
+    if (m >=1 && m <= 12) {
+        if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) {
+            if (d >= 1 && d <= 31) {
+                printf("Data %d.%d.%d jest poprawna.\n", d, m, r);
             }   
             else {
                 printf("Podano niepoprawny dzień.\n");
             }
         }
-        else if (miesiac == 2) {
-            if (((rok % 4 == 0 && rok % 100 != 0) || (rok % 400 == 0)) && (dzien >= 1 && dzien <= 29)) {
-                printf("Data %d.%d.%d jest poprawna.\n", dzien, miesiac, rok);
+        else if (m == 2) {
+            if (((r % 4 == 0 && r % 100 != 0) || (r % 400 == 0)) && (d >= 1 && d <= 29)) {
+                printf("Data %d.%d.%d jest poprawna.\n", d, m, r);
             }
-            else if ((dzien >= 1 && dzien <= 28)) {
-                printf("Data %d.%d.%d jest poprawna.\n", dzien, miesiac, rok);
+            else if ((d >= 1 && d <= 28)) {
+                printf("Data %d.%d.%d jest poprawna.\n", d, m, r);
             } 
             else {
                 printf("Podano niepoprawny dzień.\n");
             }
         }
         else {
-            if (dzien >= 1 && dzien <= 30) {
-                printf("Data %d.%d.%d jest poprawna.\n", dzien, miesiac, rok);
+            if (d >= 1 && d <= 30) {
+                printf("Data %d.%d.%d jest poprawna.\n", d, m, r);
             }   
             else {
                 printf("Podano niepoprawny dzień.\n");
