@@ -10,7 +10,7 @@ int main()
     printf("Podaj dwie liczby naturalne:\n");
     scanf("%u%u", &a, &b);
 
-    for(int i = 0; i <= b; i++) {
+    for (int i = 0; i <= b; i++) {
         wynik *= a;
     }
 

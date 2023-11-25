@@ -9,7 +9,7 @@ int main()
     printf("Podaj liczbę naturalną: ");
     scanf("%u", &n);
 
-    for(int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++) {
         suma_kwadratow += i * i;
     }
 

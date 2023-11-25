@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int main() {
+int main()
+{
     int a1, b1, a2, b2, da, db;
 
     printf("Podaj początkową pozycję piłeczki (dwie liczby od 1 do 10 oddzielone spacją): ");
@@ -28,9 +29,13 @@ int main() {
     
     while (1) {
         system("clear");
-        for (int i = 1; i <= 10; ++i) {
-            for (int j = 1; j <= 10; ++j) {
-                if (i == a1 && j == b1) {
+
+        for (int i = 1; i <= 10; ++i)
+        {
+            for (int j = 1; j <= 10; ++j)
+            {
+                if (i == a1 && j == b1)
+                {
                     printf("x ");
                 } else {
                     printf("- ");
@@ -38,9 +43,11 @@ int main() {
             }
             printf("\n");
         }
+
         if (a1 > 10 || b1 > 10 || a1 < 1 || b1 < 1) {
             break;
         }
+        
         a1 += da;
         b1 += db;
         sleep(1);
