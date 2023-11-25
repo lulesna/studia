@@ -16,7 +16,6 @@ int main()
     scanf("%d", &rok);
 
     if (miesiac >=1 && miesiac <= 12) {
-        
         if (miesiac == 1 || miesiac == 3 || miesiac == 5 || miesiac == 7 || miesiac == 8 || miesiac == 10 || miesiac == 12) {
             if (dzien >= 1 && dzien <= 31) {
                 printf("Data %d.%d.%d jest poprawna.\n", dzien, miesiac, rok);
@@ -44,7 +43,6 @@ int main()
                 printf("Podano niepoprawny dzień.\n");
             }
         }
-
     }
     else {
         printf("Podano niepoprawny miesiąc.\n");
