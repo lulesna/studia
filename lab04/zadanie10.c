@@ -30,8 +30,10 @@ int main() {
         
         system("clear");
         
-        for (int i = 1; i <= 10; ++i) {
-            for (int j = 1; j <= 10; ++j) {
+        for (int i = 1; i <= 10; ++i)
+        {    
+            for (int j = 1; j <= 10; ++j) 
+            {    
                 if (i == a1 && j == b1) {
                     printf("x ");
                 } else {
@@ -49,13 +51,13 @@ int main() {
             a1 = 1;
             da = -da;
         }
-        if (b1 < 1) {
-            b1 = 1;
-            db = -db;
-        }
         if (a1 > 10) {
             a1 = 10;
             da = -da;
+        }
+        if (b1 < 1) {
+            b1 = 1;
+            db = -db;
         }
         if (b1 > 10) {
             b1 = 10;
