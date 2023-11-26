@@ -20,9 +20,10 @@ int main()
     for (i = 0; i < dlugosc / 2; i++) {
         if (napis[i] != napis[dlugosc - i -1]) {
             printf("Podany napis nie jest palindromem.\n");
-            return 0;
+            return 1;
         }
     }
     printf("Podany napis jest palindromem.\n");
-    return 1;
+
+    return 0;
 }
