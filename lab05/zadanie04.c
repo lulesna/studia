@@ -9,21 +9,21 @@ void funkcja(char s[], int i) {
 
 int main() 
 {
-    char napis[20];
+    char slowo[20];
     int i, dlugosc;
 
-    printf("Podaj napis: ");
-    scanf("%s", napis);
+    printf("Podaj słowo: ");
+    scanf("%s", slowo);
 
-    dlugosc = strlen(napis);
+    dlugosc = strlen(slowo);
 
     for (i = 0; i < dlugosc / 2; i++) {
-        if (napis[i] != napis[dlugosc - i -1]) {
-            printf("Podany napis nie jest palindromem.\n");
+        if (slowo[i] != slowo[dlugosc - i -1]) {
+            printf("Podane słowo nie jest palindromem.\n");
             return 1;
         }
     }
-    printf("Podany napis jest palindromem.\n");
+    printf("Podane słowo jest palindromem.\n");
 
     return 0;
 }
