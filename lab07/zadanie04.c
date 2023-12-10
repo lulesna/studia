@@ -40,7 +40,8 @@ int main()
             printf("%d ", tablica[i]);
         }
         printf("\n");
-    } else {
+    }
+    else {
         printf("Wystąpił błąd.\n");
     }
 

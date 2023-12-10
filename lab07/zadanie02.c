@@ -6,7 +6,7 @@ int main()
 {
     int tablica[10];
 
-    printf("Podaj elementy tablicy 10 elementowej: ");
+    printf("Podaj elementy tablicy 10 elementowej:\n");
     for (int i = 0; i < 10; i++) {
         scanf("%d", &tablica[i]);
     }
