@@ -1,4 +1,4 @@
-/*Napisz program który pobierze od użytkownika rok i sprawdzi czy jest on przestępny.*/
+/*Napisz program, który pobierze od użytkownika rok i sprawdzi, czy jest on przestępny.*/
 
 #include <stdio.h>
 

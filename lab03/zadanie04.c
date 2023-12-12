@@ -1,4 +1,4 @@
-/*Napisz program który pobierze od użytkownika trzy liczby i zwróci największą liczbę.*/
+/*Napisz program, który pobierze od użytkownika trzy liczby i zwróci największą liczbę.*/
 
 #include <stdio.h>
 

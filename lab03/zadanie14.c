@@ -1,4 +1,4 @@
-/*Napisz program który dla dowolnej wartości kąta w stopniach zwróci wartość tego kąta w radianach.*/
+/*Napisz program, który dla dowolnej wartości kąta w stopniach zwróci wartość tego kąta w radianach.*/
 
 #include <stdio.h>
 

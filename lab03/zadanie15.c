@@ -1,4 +1,4 @@
-/*Napisz program który poprosi użytkownika o odgadnięcie liczby z zakresu 1-5. Liczba powinna być na stałe wpisana do programu. Użytkownik ma trzy szanse na odgadnięcie liczby, jeśli użytkownik odgadnie prawidłową liczbę przed trzecią szansą program powinien się zakończyć. Podanie liczby z poza zakresu powinno skutkować dodatkową informacją o zmarnowanej szansie.*/
+/*Napisz program, który poprosi użytkownika o odgadnięcie liczby z zakresu 1-5. Liczba powinna być na stałe wpisana do programu. Użytkownik ma trzy szanse na odgadnięcie liczby, jeśli użytkownik odgadnie prawidłową liczbę przed trzecią szansą, program powinien się zakończyć. Podanie liczby z poza zakresu powinno skutkować dodatkową informacją o zmarnowanej szansie.*/
 
 #include <stdio.h>
 

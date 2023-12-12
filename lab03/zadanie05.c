@@ -1,4 +1,4 @@
-/*Napisz program który pobierze od użytkownika znak ASCII (char) lub kod ASCII (int) i sprawdzi czy jest on literą alfabetu.*/
+/*Napisz program, który pobierze od użytkownika znak ASCII (char) lub kod ASCII (int) i sprawdzi, czy jest on literą alfabetu.*/
 
 #include <stdio.h>
 
@@ -7,7 +7,7 @@ int main()
     char znak;
     int kod, odpowiedz;
 
-    printf("Jeśli chcesz podać znak, wpisz '1', jeśli chcesz podać kod ASCII, wpisz '2': ");
+    printf("Jeśli chcesz podać znak ASCII, wpisz '1', jeśli chcesz podać kod ASCII, wpisz '2': ");
     scanf("%d", &odpowiedz);
 
     if (odpowiedz == 1) {

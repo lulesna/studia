@@ -1,4 +1,4 @@
-/*Napisz program który pobierze od użytkownika liczbę i sprawdzi czy jest ona podzielna przez liczby z zakresu 2-6 jeśli tak program powinien zwrócić pierwszą z tych liczb, jeśli podana liczba nie dzieli się przez żadną z tych liczb program powinien zwrócić stosowny komunikat.*/
+/*Napisz program, który pobierze od użytkownika liczbę i sprawdzi, czy jest ona podzielna przez liczby z zakresu 2-6, jeśli tak, program powinien zwrócić pierwszą z tych liczb, jeśli podana liczba nie dzieli się przez żadną z tych liczb, program powinien zwrócić stosowny komunikat.*/
 
 #include <stdio.h>
 

@@ -1,4 +1,4 @@
-/*Napisz program który dla wybranych kątów wyrażonych w radianach wypisze wartości tych kątów w stopniach.*/
+/*Napisz program, który dla wybranych kątów wyrażonych w radianach wypisze wartości tych kątów w stopniach.*/
 
 #include <stdio.h>
 

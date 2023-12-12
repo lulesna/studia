@@ -1,4 +1,4 @@
-/*Napisz program który poprosi użytkownika o odgadnięcie liczby z zakresu 1-5. Użytkownik ma cztery szanse na odgadnięcie liczby, ale złośliwy program powinien zawsze informować o odgadnięciu złej liczby. Po ostatniej próbie użytkownika program podaje jako poprawną odpowiedź liczbę z zakresu 1-5 różną od liczb podanych przez użytkownika.*/
+/*Napisz program, który poprosi użytkownika o odgadnięcie liczby z zakresu 1-5. Użytkownik ma cztery szanse na odgadnięcie liczby, ale złośliwy program powinien zawsze informować o odgadnięciu złej liczby. Po ostatniej próbie użytkownika program podaje jako poprawną odpowiedź liczbę z zakresu 1-5 różną od liczb podanych przez użytkownika.*/
 
 #include <stdio.h>
 
@@ -31,7 +31,7 @@ int main()
         }
         else {
             liczba = 2;
-    }
+        }
     }
     else {
         liczba = 1;

@@ -1,4 +1,4 @@
-/*Napisz program który pobierze od użytkownika trzy liczby (dzień, miesiąc, rok) i sprawdzi czy tworzą poprawną datę.*/
+/*Napisz program, który pobierze od użytkownika trzy liczby (dzień, miesiąc, rok) i sprawdzi, czy tworzą poprawną datę.*/
 
 #include <stdio.h>
 
@@ -16,8 +16,8 @@ int main()
     scanf("%d", &rok);
 
     if (miesiac >=1 && miesiac <= 12) {
-        if (miesiac == 1 || miesiac == 3 || miesiac == 5 || miesiac == 7 || miesiac == 8 || miesiac == 10 || miesiac == 12) {
-            if (dzien >= 1 && dzien <= 31) {
+        if (miesiac == 4 || miesiac == 6 || miesiac == 9 || miesiac == 11) {
+            if (dzien >= 1 && dzien <= 30) {
                 printf("Data %d.%d.%d jest poprawna.\n", dzien, miesiac, rok);
             }   
             else {
@@ -36,7 +36,7 @@ int main()
             }
         }
         else {
-            if (dzien >= 1 && dzien <= 30) {
+            if (dzien >= 1 && dzien <= 31) {
                 printf("Data %d.%d.%d jest poprawna.\n", dzien, miesiac, rok);
             }   
             else {

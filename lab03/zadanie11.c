@@ -1,4 +1,4 @@
-/*Napisz program który pobierze od użytkownika długości trzech odcinków i sprawdzi czy można z nich utworzyć trójkąt prostokątny.*/
+/*Napisz program, który pobierze od użytkownika długości trzech odcinków i sprawdzi, czy można z nich utworzyć trójkąt prostokątny.*/
 
 #include <stdio.h>
 

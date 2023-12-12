@@ -1,4 +1,4 @@
-/*Napisz program który pobierze od użytkownika dwie liczby i zwróci większą z nich.*/
+/*Napisz program, który pobierze od użytkownika dwie liczby i zwróci większą z nich.*/
 
 #include <stdio.h>
 

@@ -1,4 +1,4 @@
-/*Napisz program który pobierze od użytkownika dwie pary liczb reprezentujące przeciwległe wierzchołki prostokąta i na ich podstawie wyznaczy pole i obwód tego prostokąta.*/
+/*Napisz program, który pobierze od użytkownika dwie pary liczb reprezentujące przeciwległe wierzchołki prostokąta i na ich podstawie wyznaczy pole i obwód tego prostokąta.*/
 
 #include <stdio.h>
 #include <stdlib.h>

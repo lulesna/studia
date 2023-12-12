@@ -1,4 +1,4 @@
-/*Napisz program który pobierze od użytkownika dwie liczby i zwróci wynik ich:
+/*Napisz program, który pobierze od użytkownika dwie liczby i zwróci wynik ich:
 dodawaia
 odejmowania
 mnożenia

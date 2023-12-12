@@ -1,4 +1,4 @@
-/*Napisz program który wypisze na ekranie napis "Hello, World!"*/
+/*Napisz program, który wypisze na ekranie napis "Hello, World!"*/
 
 #include <stdio.h>
 
