@@ -1,4 +1,4 @@
-/*Napisz program który dla podanej pary liczb a,b zwróci b liczb pierwszych większych lub równych a.*/
+/*Napisz program, który dla podanej pary liczb a,b zwróci b liczb pierwszych większych lub równych a.*/
 
 #include <stdio.h>
 #include <stdbool.h>

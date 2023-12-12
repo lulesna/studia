@@ -1,4 +1,4 @@
-/*Napisz program który dla podanej liczby n wczyta od użytkownika n liczb i stworzy z nich tablicę.*/
+/*Napisz program, który dla podanej liczby n wczyta od użytkownika n liczb i stworzy z nich tablicę.*/
 
 #include <stdio.h>
 

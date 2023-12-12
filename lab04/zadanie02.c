@@ -1,4 +1,4 @@
-/*Napisz program który wczyta od użytkownika parę liczb naturalnych a,b i zwróci wynik działania a do potęgi b. W rozwiązaniu nie korzystaj z potęgowania.*/
+/*Napisz program ,który wczyta od użytkownika parę liczb naturalnych a,b i zwróci wynik działania a do potęgi b. W rozwiązaniu nie korzystaj z potęgowania.*/
 
 #include <stdio.h>
 

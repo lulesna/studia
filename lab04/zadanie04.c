@@ -1,4 +1,4 @@
-/*Napisz program który dla zadanej tablicy liczb stworzy i zwróci tablicę kwadratów tych liczb.*/
+/*Napisz program, który dla zadanej tablicy liczb stworzy i zwróci tablicę kwadratów tych liczb.*/
 
 #include <stdio.h>
 

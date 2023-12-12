@@ -1,4 +1,4 @@
-/*Napisz program który dla podanej liczby n sprawdź czy n jest liczbą pierwszą.*/
+/*Napisz program, który dla podanej liczby n sprawdzi, czy n jest liczbą pierwszą.*/
 
 #include <stdio.h>
 #include <stdbool.h>

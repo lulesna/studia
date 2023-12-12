@@ -1,4 +1,4 @@
-/*Napisz program który dla podanej tablicy dwówymiarowej o wartościach 0 lub 1, wypisze na ekranie prostokąt o wymiarach zależnych od wymiarów tablicy. Na współrzędnych odpowiadającym wartości 1 umieść znak 'x'.*/
+/*Napisz program, który dla podanej tablicy dwówymiarowej o wartościach 0 lub 1, wypisze na ekranie prostokąt o wymiarach zależnych od wymiarów tablicy. Na współrzędnych odpowiadającym wartości 1 umieść znak 'x'.*/
 
 #include <stdio.h>
 

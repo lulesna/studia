@@ -1,4 +1,4 @@
-/*Napisz program który dla podanej liczby naturalnej n zwróci sumę kwadratów liczb od 1 do n.*/
+/*Napisz program, który dla podanej liczby naturalnej n zwróci sumę kwadratów liczb od 1 do n.*/
 
 #include <stdio.h>
 

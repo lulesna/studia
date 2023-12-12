@@ -1,4 +1,4 @@
-/*Napisz program który wczyta od użytkownika parę liczb a,b i zwróci pierwszą liczbę c, taką że a do potęgi c jest większe od b.*/
+/*Napisz program, który wczyta od użytkownika parę liczb a,b i zwróci pierwszą liczbę c, taką że a do potęgi c jest większe od b.*/
 
 #include <stdio.h>
 

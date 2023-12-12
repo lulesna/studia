@@ -1,4 +1,4 @@
-/*Zmodyfikuj rozwiązanie zadania 9 tak aby piłeczka mogła "odbijać" się od krawędzi planszy.*/
+/*Zmodyfikuj rozwiązanie zadania 9 tak, aby piłeczka mogła "odbijać" się od krawędzi planszy.*/
 
 #include <stdio.h>
 #include <stdlib.h>
