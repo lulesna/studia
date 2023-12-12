@@ -1,4 +1,4 @@
-/*Napisz program który pobierze od użytkownika dwie pary liczb z zakresu 1,10. Program powinien wyświetlać planszę 10x10 i piłeczkę oznaczaną przez 'x'. Pierwsza para liczb a1,b1 określa początkową pozycję piłeczki, druga para a2,b2 pozycję w następnym kroku. Program powinien w nieskończonej pętli przemieszczać piłeczkę z pozycji a1,b1 na pozycję a2,b2 oraz wyznaczać nową pozycję a2,b2 zgodnie z dotychczasowym ruchem piłeczki, w przypadku gdy piłeczka wykroczy poza zakres planszy program powinien się zakończyć.*/
+/*Napisz program, który pobierze od użytkownika dwie pary liczb z zakresu 1,10. Program powinien wyświetlać planszę 10x10 i piłeczkę oznaczaną przez 'x'. Pierwsza para liczb a1,b1 określa początkową pozycję piłeczki, druga para a2,b2 pozycję w następnym kroku. Program powinien w nieskończonej pętli przemieszczać piłeczkę z pozycji a1,b1 na pozycję a2,b2 oraz wyznaczać nową pozycję a2,b2 zgodnie z dotychczasowym ruchem piłeczki, w przypadku gdy piłeczka wykroczy poza zakres planszy program powinien się zakończyć.*/
 
 #include <stdio.h>
 #include <stdlib.h>
