@@ -46,14 +46,14 @@ int main()
     printf("Podaj pierwszą datę (dzień.miesiąc.rok):\n");
     scanf("%d.%d.%d", &dzien1, &miesiac1, &rok1);
 
-    if (sprawdzenie_poprawnosci_daty(dzien1, miesiac1, rok1) == false) {
+    if (!sprawdzenie_poprawnosci_daty(dzien1, miesiac1, rok1)) {
         return 1;
     }
 
     printf("Podaj drugą datę (dzień.miesiąc.rok):\n");
     scanf("%d.%d.%d", &dzien2, &miesiac2, &rok2);
 
-    if (sprawdzenie_poprawnosci_daty(dzien2, miesiac2, rok2) == false) {
+    if (!sprawdzenie_poprawnosci_daty(dzien2, miesiac2, rok2)) {
         return 1;
     }
 
