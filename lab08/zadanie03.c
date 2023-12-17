@@ -26,6 +26,11 @@ void sortowanie_babelkowe(int *A)
                 A[j+1] = temp;
             }
             j++;
+            for (int i = 0; i < n; ++i)
+            {
+                printf("%d", A[i]);
+            }
+            printf("\n");
         }
         i--;
     }
