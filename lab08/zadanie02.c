@@ -22,10 +22,10 @@
 
 bool przeszukiwanie_binarne(int *TAB, int N, int n)
 {
-    int left = 0, right = N - 1, middle;
+    int left = 0, right = N, middle;
     bool result = false;
     while (left <= right) {
-        middle = left + (right - left) / 2;
+        middle = floor((left + right) / 2);
         if (TAB[middle] < n) {
             left = middle + 1;
         }
