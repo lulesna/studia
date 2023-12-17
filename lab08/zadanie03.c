@@ -12,10 +12,11 @@
 
 #include <stdio.h>
 #include <string.h>
+#define n 6
 
-void sortowanie_babelkowe(int *A, int n)
+void sortowanie_babelkowe(int *A)
 {
-    int i = n, j;
+    int i = n - 1, j;
     while (i != 0) {
         j = 0;
         while (j < i) {
@@ -27,15 +28,14 @@ void sortowanie_babelkowe(int *A, int n)
             j++;
         }
         i--;
-        }
+    }
 }
 
 int main() 
 {
-    int A[] = {3, 6, 4, 7, 18, 10};
-    int n = sizeof(A) / sizeof(A[0]);
-
-    sortowanie_babelkowe(A, n);
+    int A[n] = {3, 6, 4, 7, 18, 10};
+    
+    sortowanie_babelkowe(A);
 
     int posortowana_A[n];
 
@@ -43,7 +43,7 @@ int main()
 
     for (int i = 0; i < n; ++i)
     {
-        printf("%d ", posortowana_A[i]);
+        printf("%d\n", posortowana_A[i]);
     }
 
     return 0;
