@@ -4,11 +4,6 @@
 
 int najwiekszy_element(int *tablica, int rozmiar)
 {
-    if (rozmiar <= 0 || tablica == NULL) {
-        printf("Błędna tablica.\n");
-        return -1;
-    }
-
     int max = tablica[0];
     int indeks_max = 0;
 
@@ -32,18 +27,13 @@ int main()
 
     int max = najwiekszy_element(tablica, rozmiar_tablicy);
 
-    if (max != -1) {
-        printf("Najwiekszy element: %d\n", max);
-        printf("Tablica po zamianie najwiekszego elementu na 0:\n");
+    printf("Najwiekszy element: %d\n", max);
+    printf("Tablica po zamianie najwiekszego elementu na 0:\n");
 
-        for (int i = 0; i < rozmiar_tablicy; ++i) {
-            printf("%d ", tablica[i]);
-        }
-        printf("\n");
+    for (int i = 0; i < rozmiar_tablicy; ++i) {
+        printf("%d ", tablica[i]);
     }
-    else {
-        printf("Wystąpił błąd.\n");
-    }
+    printf("\n");
 
     return 0;
 }
