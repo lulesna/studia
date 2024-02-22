@@ -1,4 +1,0 @@
-znak = x
-czy_pusty = 1
-wys = 3
-szer = 3
