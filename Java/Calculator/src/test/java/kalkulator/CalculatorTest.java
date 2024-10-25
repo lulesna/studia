@@ -88,6 +88,14 @@ public class CalculatorTest {
 		assertEquals("Stan pozostaje bez zmian.", 2, sut.getState());
 	}
 
+	@Test
+	public void testMultByMinValue() {
+		Calculator sut = new Calculator();
+		sut.setState(2);
+		sut.mult(Integer.MIN_VALUE);
+		assertEquals("Stan pozostaje bez zmian.", 2, sut.getState());
+	}
+
 	// odejmowanie
 
 	@Test
