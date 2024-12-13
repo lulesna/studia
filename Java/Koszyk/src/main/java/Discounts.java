@@ -7,10 +7,11 @@ interface DiscountCommand {
 class ThirdCheapestFreeCommand implements DiscountCommand {
     @Override
     public Product[] apply(Product[] products) {
+        Product[] newProducts = Arrays.copyOf(products, products.length);
 
         // ile jest produktów bez kubka
         int productsCount = 0;
-        for (Product p : products) {
+        for (Product p : newProducts) {
             if (!"M001".equals(p.getCode())) {
                 p.setDiscountPrice(p.getPrice());
                 productsCount++;
@@ -21,18 +22,18 @@ class ThirdCheapestFreeCommand implements DiscountCommand {
             // stworzenie tablicy bez kubka
             Product[] productsWithoutMug = new Product[productsCount];
             int index = 0;
-            for (Product p : products) {
+            for (Product p : newProducts) {
                 if (!"M001".equals(p.getCode())) {
                     productsWithoutMug[index] = p;
                     index++;
                 }
             }
 
-            int freeCount = products.length / 3;
-            Product[] cheapestProducts = ProductUtils.findNCheapest(products, freeCount);
+            int freeCount = newProducts.length / 3;
+            Product[] cheapestProducts = ProductUtils.findNCheapest(newProducts, freeCount);
 
             for (Product cheapestProduct : cheapestProducts) {
-                for (Product p : products) {
+                for (Product p : newProducts) {
                     if (p == cheapestProduct) {
                         p.setDiscountPrice(0.0);
                         break;
@@ -46,23 +47,24 @@ class ThirdCheapestFreeCommand implements DiscountCommand {
 
 class SingleProductDiscountCommand implements DiscountCommand {
     private String productCode;
-    private double discountFactor;
+    private double discountRate;
 
     public SingleProductDiscountCommand(String productCode) {
         this.productCode = productCode;
-        this.discountFactor = 0.7;
+        this.discountRate = 0.7;
     }
 
     @Override
     public Product[] apply(Product[] products) {
-        for (Product p : products) {
+        Product[] newProducts = Arrays.copyOf(products, products.length);
+        for (Product p : newProducts) {
             if (p.getCode().equals(productCode)) {
-                double discountedPrice = Math.floor(p.getPrice() * discountFactor * 100) / 100.0;
+                double discountedPrice = Math.floor(p.getPrice() * discountRate * 100) / 100.0;
                 p.setDiscountPrice(discountedPrice);
                 break;
             }
         }
-        return products;
+        return newProducts;
     }
 }
 
@@ -92,14 +94,14 @@ class AddMugCommand implements AlwaysActiveDiscount {
 class Discount5PercentCommand implements DiscountCommand {
     @Override
     public Product[] apply(Product[] products) {
-        double sum = ProductUtils.sumPrices(products);
+        Product[] newProducts = Arrays.copyOf(products, products.length);
+        double sum = ProductUtils.sumPrices(newProducts);
         if (sum > 300) {
-            for (Product p : products) {
+            for (Product p : newProducts) {
                 double discountedPrice = Math.floor(p.getPrice() * 0.95 * 100) / 100.0;
                 p.setDiscountPrice(discountedPrice);
             }
         }
-        return products;
+        return newProducts;
     }
 }
-
