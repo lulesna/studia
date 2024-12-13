@@ -44,4 +44,11 @@ public class ProductTest {
     public void testInvalidProductPrice() {
         new Product("T003", "Testowy Produkt 3", -10.0);
     }
+
+    @Test
+    public void testResetPrice() {
+        product.setDiscountPrice(100.0);
+        product.resetPrice();
+        assertEquals(123.45, product.getDiscountPrice(), 0.001);
+    }
 }
