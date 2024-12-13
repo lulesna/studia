@@ -7,6 +7,10 @@ interface DiscountCommand {
 class ThirdCheapestFreeCommand implements DiscountCommand {
     @Override
     public Product[] apply(Product[] products) {
+        if (products.length < 3) {
+            return products;
+        }
+
         Product[] newProducts = Arrays.copyOf(products, products.length);
 
         // ile jest produktów bez kubka
@@ -81,11 +85,11 @@ class AddMugCommand implements AlwaysActiveDiscount {
             }
         }
         if (sum > 200 && !mugExists) {
-            Product mug = new Product("M001", "Firmowy kubek", 20.0);
+            Product mug = new Product("M001", "Firmowy kubek", 0.0);
             mug.setDiscountPrice(0.0);
-            Product[] newArray = Arrays.copyOf(products, products.length + 1);
-            newArray[newArray.length - 1] = mug;
-            return newArray;
+            Product[] newCart = Arrays.copyOf(products, products.length + 1);
+            newCart[newCart.length - 1] = mug;
+            return newCart;
         }
         return products;
     }
