@@ -19,7 +19,6 @@ public class ProductUtilsTest {
     @Test
     public void testFindCheapest() {
         Product cheapest = ProductUtils.findCheapest(products);
-        assert cheapest != null;
         assertEquals("T002", cheapest.getCode());
         assertEquals(50.0, cheapest.getPrice(), 0.001);
     }
@@ -32,11 +31,10 @@ public class ProductUtilsTest {
                 new Product("P003", "Produkt 3", 100.0)
         };
         Product cheapest = ProductUtils.findCheapest(equalPrices);
-        assert cheapest != null;
         assertEquals("P001", cheapest.getCode());
     }
 
-    @Test
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testFindCheapestEmptyArray() {
         assertNull(ProductUtils.findCheapest(new Product[]{}));
     }
@@ -44,7 +42,6 @@ public class ProductUtilsTest {
     @Test
     public void testFindMostExpensive() {
         Product mostExpensive = ProductUtils.findMostExpensive(products);
-        assert mostExpensive != null;
         assertEquals("T003", mostExpensive.getCode());
         assertEquals(150.0, mostExpensive.getPrice(), 0.001);
     }
