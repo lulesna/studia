@@ -29,15 +29,19 @@ public class Product {
         return price;
     }
 
-    public double getDiscountPrice() {
-        return discountPrice;
-    }
-
     public void setDiscountPrice(double discountPrice) {
         if (discountPrice < 0) {
             throw new IllegalArgumentException("Nieprawidłowa cena");
         }
         this.discountPrice = discountPrice;
+    }
+
+    public double getDiscountPrice() {
+        return discountPrice;
+    }
+
+    public void resetPrice() {
+        this.discountPrice = this.price;
     }
 }
 
@@ -56,7 +60,7 @@ class ProductComparator implements Comparator<Product> {
 class ProductUtils {
 
     public static Product findCheapest(Product[] products) {
-        if (products.length == 0) return null;
+        if (products == null || products.length == 0) return null;
         Product cheapest = products[0];
         for (Product product : products) {
             if (product.getDiscountPrice() < cheapest.getDiscountPrice()) {
@@ -67,7 +71,7 @@ class ProductUtils {
     }
 
     public static Product findMostExpensive(Product[] products) {
-        if (products.length == 0) return null;
+        if (products == null || products.length == 0) return null;
         Product mostExpensive = products[0];
         for (Product product : products) {
             if (product.getDiscountPrice() > mostExpensive.getDiscountPrice()) {
@@ -78,6 +82,7 @@ class ProductUtils {
     }
 
     public static Product[] findNCheapest(Product[] products, int n) {
+        if (products == null || products.length == 0 || n <= 0) return null;
         Product[] copy = Arrays.copyOf(products, products.length);
         sortProducts(copy, new ProductComparator());
         if (n > copy.length) {
@@ -96,6 +101,7 @@ class ProductUtils {
     }
 
     public static Product[] findNMostExpensive(Product[] products, int n) {
+        if (products == null || products.length == 0 || n <= 0) return null;
         Product[] copy = Arrays.copyOf(products, products.length);
         sortProducts(copy, new ProductComparator());
         if (n > copy.length) {
@@ -117,5 +123,3 @@ class ProductUtils {
         Arrays.sort(products, comparator);
     }
 }
-
-
