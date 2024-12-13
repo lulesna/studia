@@ -17,6 +17,7 @@ public class Product {
         this.discountPrice = price;
     }
 
+    // gettery
     public String getCode() {
         return code;
     }
@@ -29,15 +30,16 @@ public class Product {
         return price;
     }
 
+    public double getDiscountPrice() {
+        return discountPrice;
+    }
+
+    // settery
     public void setDiscountPrice(double discountPrice) {
         if (discountPrice < 0) {
             throw new IllegalArgumentException("Nieprawidłowa cena");
         }
         this.discountPrice = discountPrice;
-    }
-
-    public double getDiscountPrice() {
-        return discountPrice;
     }
 
     public void resetPrice() {
@@ -49,10 +51,11 @@ class ProductComparator implements Comparator<Product> {
     @Override
     public int compare(Product product1, Product product2) {
         // po cenie malejąco
-        if (product1.getDiscountPrice() != product2.getDiscountPrice()) {
-            return Double.compare(product2.getDiscountPrice(), product1.getDiscountPrice());
+        int priceCompare = Double.compare(product2.getDiscountPrice(), product1.getDiscountPrice());
+        if (priceCompare != 0) {
+            return priceCompare;
         }
-        // po nazwie rosnąco
+        // po nazwie rosnąco, bo ceny są równe
         return product1.getName().compareTo(product2.getName());
     }
 }
@@ -60,7 +63,7 @@ class ProductComparator implements Comparator<Product> {
 class ProductUtils {
 
     public static Product findCheapest(Product[] products) {
-        if (products == null || products.length == 0) return null;
+        if (products == null) return null;
         Product cheapest = products[0];
         for (Product product : products) {
             if (product.getDiscountPrice() < cheapest.getDiscountPrice()) {
@@ -71,7 +74,7 @@ class ProductUtils {
     }
 
     public static Product findMostExpensive(Product[] products) {
-        if (products == null || products.length == 0) return null;
+        if (products == null) return null;
         Product mostExpensive = products[0];
         for (Product product : products) {
             if (product.getDiscountPrice() > mostExpensive.getDiscountPrice()) {
@@ -82,7 +85,7 @@ class ProductUtils {
     }
 
     public static Product[] findNCheapest(Product[] products, int n) {
-        if (products == null || products.length == 0 || n <= 0) return null;
+        if (products == null || n <= 0) return null;
         Product[] copy = Arrays.copyOf(products, products.length);
         sortProducts(copy, new ProductComparator());
         if (n > copy.length) {
@@ -101,7 +104,7 @@ class ProductUtils {
     }
 
     public static Product[] findNMostExpensive(Product[] products, int n) {
-        if (products == null || products.length == 0 || n <= 0) return null;
+        if (products == null|| n <= 0) return null;
         Product[] copy = Arrays.copyOf(products, products.length);
         sortProducts(copy, new ProductComparator());
         if (n > copy.length) {
@@ -112,6 +115,9 @@ class ProductUtils {
     }
 
     public static double sumPrices(Product[] products) {
+        if (products == null) {
+            return 0.0;
+        }
         double sum = 0;
         for (Product product : products) {
             sum += product.getDiscountPrice();
@@ -120,6 +126,9 @@ class ProductUtils {
     }
 
     public static void sortProducts(Product[] products, Comparator<Product> comparator) {
+        if (products == null || comparator == null) {
+            return;
+        }
         Arrays.sort(products, comparator);
     }
 }
