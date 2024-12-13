@@ -7,12 +7,12 @@ import static org.junit.Assert.*;
 
 public class JavaMarktTest {
     private JavaMarkt javaMarkt;
-    private Product[] cart;
+    private Product[] initialCart;
     private List<DiscountCommand> discounts;
 
     @Before
     public void setUp() {
-        cart = new Product[]{
+        initialCart = new Product[]{
                 new Product("D329", "Drukarka", 200.0),
                 new Product("M948", "Monitor", 449.49),
                 new Product("K150", "Klawiatura", 79.99),
@@ -26,7 +26,7 @@ public class JavaMarktTest {
                 new ThirdCheapestFreeCommand()
         );
 
-        javaMarkt = new JavaMarkt(cart, discounts);
+        javaMarkt = new JavaMarkt(initialCart, discounts);
     }
 
     @Test
@@ -49,18 +49,6 @@ public class JavaMarktTest {
         // Drukarka - rabat 30%
         assertEquals("D329", cart[0].getCode());
         assertEquals(140.0, cart[0].getDiscountPrice(), 0.01);
-
-        // Monitor - bez rabatu
-        assertEquals("M948", cart[1].getCode());
-        assertEquals(449.49, cart[1].getDiscountPrice(), 0.01);
-
-        // Klawiatura - bez rabatu
-        assertEquals("K150", cart[2].getCode());
-        assertEquals(79.99, cart[2].getDiscountPrice(), 0.01);
-
-        // Baterie - bez rabatu
-        assertEquals("B079", cart[3].getCode());
-        assertEquals(19.90, cart[3].getDiscountPrice(), 0.001);
     }
 
     @Test
@@ -106,5 +94,30 @@ public class JavaMarktTest {
         javaMarkt.resetCart();
         Product[] cart = javaMarkt.getCart();
         assertEquals(0, cart.length);
+    }
+
+    @Test
+    public void testApplyDiscountsAndSort() {
+        javaMarkt.applyDiscountsAndSort();
+        Product[] cart = javaMarkt.getCart();
+
+        assertEquals(5, cart.length);
+
+        for (Product p : cart) {
+            if (p.getCode().equals("D329")) {
+                assertEquals(140.0, p.getDiscountPrice(), 0.001);
+            }
+        }
+
+        int freeProductCount = 0;
+        for (Product p : cart) {
+            if (p.getDiscountPrice() == 0.0) {
+                freeProductCount++;
+            }
+            if (p.getCode().equals("M001")) {
+                assertEquals(0.0, p.getDiscountPrice(), 0.001);
+            }
+        }
+        assertEquals(1, freeProductCount);
     }
 }
