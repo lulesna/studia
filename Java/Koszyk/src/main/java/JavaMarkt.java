@@ -26,6 +26,9 @@ public class JavaMarkt {
     }
 
     public int findProductIndex(String productCode) {
+        if (productCode == null) {
+            return -1;
+        }
         for (int i = 0; i < cart.length; i++) {
             if (cart[i].getCode().equals(productCode)) {
                 return i;
@@ -35,6 +38,9 @@ public class JavaMarkt {
     }
 
     public void addProductToCart(Product product) {
+        if (product == null) {
+            return;
+        }
         Product[] newCart = new Product[cart.length + 1];
         System.arraycopy(cart, 0, newCart, 0, cart.length);
         newCart[cart.length] = product;
@@ -43,6 +49,9 @@ public class JavaMarkt {
     }
 
     public void removeProductFromCart(String productCode) {
+        if (productCode == null) {
+            return;
+        }
         int index = findProductIndex(productCode);
         if (index == -1) return;
 
@@ -60,7 +69,9 @@ public class JavaMarkt {
     }
 
     public void applyBestDiscount() {
-        if (cart.length == 0) return;
+        if (cart.length == 0) {
+            return;
+        }
 
         DiscountCommand bestDiscount = null;
         double maxSavings = 0.0;
