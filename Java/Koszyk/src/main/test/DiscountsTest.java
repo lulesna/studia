@@ -31,7 +31,7 @@ public class DiscountsTest {
                 new Product("D329", "Drukarka", 200.0),
                 new Product("M948", "Monitor", 449.49),
                 new Product("K150", "Klawiatura", 79.99),
-                new Product("B079", "Baterie AA 4szt.", 19.90),
+                new Product("B079", "Baterie AA 6szt.", 19.90),
                 new Product("P249", "Podkładka", 29.99),
                 new Product("S022", "Suszarka", 89.99)
         };
@@ -110,11 +110,5 @@ public class DiscountsTest {
         assertEquals(140.0, result[0].getDiscountPrice(), 0.001);
         assertEquals(449.49, result[1].getDiscountPrice(), 0.001);
         assertEquals(79.99, result[2].getDiscountPrice(), 0.001);
-    }
-
-    @Test
-    public void testAddMugAndThirdCheapestFree() {
-        DiscountCommand AddMugCommand = new AddMugCommand();
-        DiscountCommand ThirdCheapestFreeCommand = new ThirdCheapestFreeCommand();
     }
 }
