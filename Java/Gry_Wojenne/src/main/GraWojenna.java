@@ -1,18 +1,24 @@
-import java.io.Serializable;
-
-public class GraWojenna implements Serializable {
+public class GraWojenna {
     private General general1;
     private General general2;
     private Sekretarz sekretarz;
-    private static final int POCZATKOWE_ZLOTO = 50;
+    public int poczatkoweZloto = 100;
 
     public GraWojenna() {
         this.sekretarz = new Sekretarz();
-        this.general1 = new General("Pierwszy", POCZATKOWE_ZLOTO);
-        this.general2 = new General("Drugi", POCZATKOWE_ZLOTO);
+        this.general1 = new General("Pierwszy", poczatkoweZloto);
+        this.general2 = new General("Drugi", poczatkoweZloto);
 
         general1.dodajObserwatora(sekretarz);
         general2.dodajObserwatora(sekretarz);
+    }
+
+    public void setPoczatkoweZloto(int nowaLiczbaZlota) {
+        if (nowaLiczbaZlota >= 0) {
+            poczatkoweZloto = nowaLiczbaZlota;
+        } else {
+            throw new IllegalArgumentException("Liczba złotych monet nie może być ujemna");
+        }
     }
 
     public void przeprowadzBitwe() {
