@@ -1,8 +1,7 @@
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class General extends JednostkaWojskowa implements Serializable {
+public class General extends JednostkaWojskowa {
     private ArrayList<Zolnierz> armia;
     private ArrayList<ObserwatorArmii> obserwatorzy;
 
@@ -37,13 +36,6 @@ public class General extends JednostkaWojskowa implements Serializable {
         for (ObserwatorArmii obserwator : obserwatorzy) {
             obserwator.aktualizuj(akcja, this, przeciwnik);
         }
-    }
-
-    public void dodajZolnierza(Zolnierz zolnierz) {
-        if (zolnierz == null) {
-            throw new IllegalArgumentException("Żołnierz nie może być null");
-        }
-        armia.add(zolnierz);
     }
 
     public void kupZolnierza(StopienWojskowy stopien) {
@@ -94,6 +86,7 @@ public class General extends JednostkaWojskowa implements Serializable {
     }
 
     public void usunMartwychZolnierzy() {
+        powiadomObserwatorow("USUNIECIE_START", null);
         ArrayList<Zolnierz> nowaArmia = new ArrayList<>();
         for (Zolnierz zolnierz : armia) {
             if (zolnierz.czyZywy()) {
@@ -101,7 +94,7 @@ public class General extends JednostkaWojskowa implements Serializable {
             }
         }
         armia = nowaArmia;
-        powiadomObserwatorow("USUNIECIEY", null);
+        powiadomObserwatorow("USUNIECIE_KONIEC", null);
     }
 
     private void wygrana(General przegrany) {
