@@ -15,22 +15,25 @@ public class GraWojennaTest {
     }
 
     @Test
-    public void testInicjalizacjaGry() {
+    public void testGraWojenna() {
         assertNotNull(gra.getGeneral1());
         assertNotNull(gra.getGeneral2());
         assertEquals("Pierwszy", gra.getGeneral1().getNazwa());
         assertEquals("Drugi", gra.getGeneral2().getNazwa());
-        assertEquals(GraWojenna.POCZATKOWE_ZLOTO, gra.getGeneral1().getZloteMonety());
-        assertEquals(GraWojenna.POCZATKOWE_ZLOTO, gra.getGeneral2().getZloteMonety());
+        assertEquals(gra.poczatkoweZloto, gra.getGeneral1().getZloteMonety());
+        assertEquals(gra.poczatkoweZloto, gra.getGeneral2().getZloteMonety());
         assertEquals(0, gra.getGeneral1().getArmia().size());
         assertEquals(0, gra.getGeneral2().getArmia().size());
     }
 
     @Test
-    public void testBitwa() {
-        General general1 = gra.getGeneral1();
-        General general2 = gra.getGeneral2();
+    public void testSetPoczatkoweZloto() {
+        gra.setPoczatkoweZloto(100);
+        assertEquals(100, gra.poczatkoweZloto);
+    }
 
+    @Test
+    public void testPrzeprowadzBitwe() {
         general1.kupZolnierza(StopienWojskowy.KAPRAL);
         general1.kupZolnierza(StopienWojskowy.KAPRAL);
         general2.kupZolnierza(StopienWojskowy.SZEREGOWY);
@@ -53,7 +56,7 @@ public class GraWojennaTest {
     }
 
     @Test
-    public void testSekwencjaBitew() {
+    public void testSekwencjiBitew() {
         general1.kupZolnierza(StopienWojskowy.KAPRAL);
         general2.kupZolnierza(StopienWojskowy.SZEREGOWY);
 

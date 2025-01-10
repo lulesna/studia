@@ -25,6 +25,7 @@ public class ZolnierzTest {
 
     @Test
     public void testZwiekszanieDoswiadczenia() {
+        assertEquals(1, zolnierz.getSila());
         zolnierz.zwiekszDoswiadczenie();
         assertEquals(2, zolnierz.getSila());
     }
@@ -38,55 +39,55 @@ public class ZolnierzTest {
 
     @Test
     public void testAwansSzeregowy() {
-        // Szeregowy -> Kapral (5 * 1 = 5 punktów doświadczenia)
-        for (int i = 1; i < 5; i++) {
+        // doświadczenie = 4
+        for (int i = 1; i < 4; i++) {
             zolnierz.zwiekszDoswiadczenie();
             assertEquals(StopienWojskowy.SZEREGOWY, zolnierz.getStopien());
         }
-        zolnierz.zwiekszDoswiadczenie(); // 5-te doświadczenie
+        zolnierz.zwiekszDoswiadczenie(); // doświadczenie = 5
         assertEquals(StopienWojskowy.KAPRAL, zolnierz.getStopien());
-        assertEquals(1, zolnierz.getDoswiadczenie()); // Reset doświadczenia
+        assertEquals(1, zolnierz.getDoswiadczenie()); // reset doświadczenia
     }
 
     @Test
     public void testAwansKapral() {
         Zolnierz kapral = new Zolnierz(StopienWojskowy.KAPRAL);
-        // Kapral -> Kapitan (5 * 2 = 10 punktów doświadczenia)
-        for (int i = 1; i < 10; i++) {
+        // doświadczenie = 9
+        for (int i = 1; i < 9; i++) {
             kapral.zwiekszDoswiadczenie();
             assertEquals(StopienWojskowy.KAPRAL, kapral.getStopien());
         }
-        kapral.zwiekszDoswiadczenie(); // 10-te doświadczenie
+        kapral.zwiekszDoswiadczenie(); // doświadczenie = 10
         assertEquals(StopienWojskowy.KAPITAN, kapral.getStopien());
-        assertEquals(1, kapral.getDoswiadczenie());
+        assertEquals(1, kapral.getDoswiadczenie()); // reset
     }
 
     @Test
     public void testAwansKapitan() {
         Zolnierz kapitan = new Zolnierz(StopienWojskowy.KAPITAN);
-        // Kapitan -> Major (5 * 3 = 15 punktów doświadczenia)
-        for (int i = 1; i < 15; i++) {
+        // doświadczenie = 14
+        for (int i = 1; i < 14; i++) {
             kapitan.zwiekszDoswiadczenie();
             assertEquals(StopienWojskowy.KAPITAN, kapitan.getStopien());
         }
-        kapitan.zwiekszDoswiadczenie(); // 15-te doświadczenie
+        kapitan.zwiekszDoswiadczenie(); // doświadczenie = 15
         assertEquals(StopienWojskowy.MAJOR, kapitan.getStopien());
-        assertEquals(1, kapitan.getDoswiadczenie());
+        assertEquals(1, kapitan.getDoswiadczenie()); // reset
     }
 
     @Test
     public void testBrakAwansuMajora() {
         Zolnierz major = new Zolnierz(StopienWojskowy.MAJOR);
-        // Major nie powinien awansować (nawet przy 5 * 4 = 20 punktach doświadczenia)
+        // doświadczenie = 20
         for (int i = 0; i < 20; i++) {
             major.zwiekszDoswiadczenie();
-            assertEquals(StopienWojskowy.MAJOR, major.getStopien());
+            assertEquals(StopienWojskowy.MAJOR, major.getStopien()); // brak awansu
         }
-        assertEquals(21, major.getDoswiadczenie()); // Doświadczenie powinno rosnąć
+        assertEquals(21, major.getDoswiadczenie()); // brak resetu
     }
 
     @Test
-    public void testUnikalneId() {
+    public void testUnikalnaNazwa() {
         Zolnierz zolnierz1 = new Zolnierz(StopienWojskowy.SZEREGOWY);
         Zolnierz zolnierz2 = new Zolnierz(StopienWojskowy.SZEREGOWY);
         assertNotEquals(zolnierz1.getNazwa(), zolnierz2.getNazwa());
