@@ -1,6 +1,4 @@
-import java.io.Serializable;
-
-public class Zolnierz extends JednostkaWojskowa implements Serializable {
+public class Zolnierz extends JednostkaWojskowa {
     private StopienWojskowy stopien;
     private int doswiadczenie;
     private static int licznik = 1;
@@ -50,6 +48,6 @@ public class Zolnierz extends JednostkaWojskowa implements Serializable {
     }
 
     public boolean czyZywy() {
-        return doswiadczenie > 0;
+        return doswiadczenie >= 1;
     }
 }
