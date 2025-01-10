@@ -1,11 +1,9 @@
-import java.io.Serializable;
-
-public abstract class JednostkaWojskowa implements Serializable {
+public abstract class JednostkaWojskowa {
     protected String nazwa;
     protected int zloteMonety;
 
     public JednostkaWojskowa(String nazwa, int zloteMonety) {
-        if (nazwa == null) {
+        if (nazwa == null || nazwa.isEmpty()) {
             throw new IllegalArgumentException("Nazwa nie może być null");
         }
         if (zloteMonety < 0) {
