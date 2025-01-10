@@ -1,8 +1,7 @@
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public abstract class Raport implements Serializable {
+public abstract class Raport {
     protected final LocalDateTime dataUtworzenia;
     protected final String typAkcji;
 
