@@ -1,0 +1,1 @@
+Test szyfru Cezara i afinicznego dla plików tekstowych
